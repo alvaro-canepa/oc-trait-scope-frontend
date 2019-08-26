@@ -56,6 +56,18 @@ trait ScopeFrontendTrait
             }
         }
 
+        return $this->extendFrontend($query, $data, $sort);
+
+    }
+
+    /**
+     * @param \October\Rain\Database\Builder|static $query
+     * @param array                                 $data
+     * @param array                                 $sort
+     *
+     * @return \October\Rain\Database\Builder|static
+     */
+    public function extendFrontend($query, $data = [], $sort = []) {
         return $query;
     }
 }
